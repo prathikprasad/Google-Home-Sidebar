@@ -1,0 +1,39 @@
+{
+  "manifest_version": 3,
+  "name": "Google Home Sidebar",
+  "version": "1.0",
+  "description": "Quickly access your Google Home devices in your Chrome side panel.",
+  "permissions": [
+    "sidePanel",
+    "declarativeNetRequest",
+    "storage",
+    "contextMenus"
+  ],
+  "host_permissions": [
+    "*://home.google.com/*"
+  ],
+  "side_panel": {
+    "default_path": "sidepanel.html"
+  },
+  "action": {
+    "default_title": "Click to open Google Home",
+    "default_icon": {
+      "128": "icon.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "128": "icon.png"
+  },
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "ruleset_1",
+        "enabled": true,
+        "path": "rules.json"
+      }
+    ]
+  }
+}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <style>
+      body, html { margin: 0; padding: 0; height: 100%; overflow: hidden; font-family: Arial, sans-serif; background-color: #fff; }
+      iframe { width: 100%; height: 100%; border: none; display: none; }
+      .setup-container { padding: 30px; text-align: center; display: none; color: #333; }
+      .setup-btn { background-color: #1a73e8; color: white; border: none; padding: 10px 16px; border-radius: 4px; cursor: pointer; font-size: 14px; margin-top: 15px;}
+      .setup-btn:hover { background-color: #1557b0; }
+    </style>
+  </head>
+  <body>
+
+    <div id="setupMessage" class="setup-container">
+      <h3>Setup Required</h3>
+      <p>Please configure your Google Home devices page URL in the extension's settings to view your devices.</p>
+      <button id="openSettings" class="setup-btn">Open Home Settings</button>
+    </div>
+
+    <iframe id="homeFrame"></iframe>
+
+    <script src="sidepanel.js"></script>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "priority": 1,
+    "action": {
+      "type": "modifyHeaders",
+      "requestHeaders": [
+        { "header": "sec-fetch-site", "operation": "set", "value": "same-origin" },
+        { "header": "sec-fetch-mode", "operation": "set", "value": "navigate" },
+        { "header": "referer", "operation": "set", "value": "https://home.google.com/" }
+      ],
+      "responseHeaders": [
+        { "header": "x-frame-options", "operation": "remove" },
+        { "header": "content-security-policy", "operation": "remove" }
+      ]
+    },
+    "condition": {
+      "urlFilter": "||home.google.com",
+      "resourceTypes": ["sub_frame"]
+    }
+  }
+]
